@@ -1,7 +1,7 @@
 import {createInstance} from "@amplitude/analytics-browser";
 
 export const amp2 = createInstance();
-amp2.init('37c46696968a81dd4193b5c2e5b5ad9', undefined, { defaultTracking: { sessions: true, pageViews: true, formInteractions: true, fileDownloads: true }});
+amp2.init('REPLACE_WITH_API_KEY', undefined, { defaultTracking: { sessions: true, pageViews: true, formInteractions: true, fileDownloads: true }});
 
 
 export function App() {

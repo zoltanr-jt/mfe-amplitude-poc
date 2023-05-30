@@ -45,7 +45,7 @@ yarn global add nx
 ```
 
 
-### 2. Running in local
+### 2. Running in local (development mode)
 
 
 In project root folder run the following command to start all apps:
@@ -55,6 +55,21 @@ nx run-many --parallel --target=serve --projects=host,remote1-app,remote2-app
 Navigate to `http://localhost:4200/` to open the `host` app.
 For **remote1** and **remote2** use ports `4201` and `4202` respectively.
 The app will automatically reload if you change any of the source files.
+
+### 3. Running in production mode
+
+In project root folder run the following command to build all apps:
+```bash
+nx run-many --parallel --target=build  -c=production --projects=host,remote1-app,remote2-app
+```
+
+
+The run the following command to serve in production mode:
+```bash
+nx run-many --parallel --target=serve  -c=production --projects=host,remote1-app,remote2-app
+
+```
+
 
 ## Further help
 

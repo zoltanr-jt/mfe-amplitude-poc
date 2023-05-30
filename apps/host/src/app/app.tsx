@@ -11,7 +11,7 @@ const RemoteApp2 = React.lazy(() => import('remote-app2/Module'));
 
 
 export const amp1 = createInstance();
-amp1.init('37c46696968a81dd4193b5c2e5b5ad9', undefined, { defaultTracking: { sessions: true, pageViews: true, formInteractions: true, fileDownloads: true }});
+amp1.init('REPLACE_WITH_API_KEY', undefined, { defaultTracking: { sessions: true, pageViews: true, formInteractions: true, fileDownloads: true }});
 
 
 export function App() {
