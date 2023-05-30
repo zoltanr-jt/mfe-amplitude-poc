@@ -1,9 +1,17 @@
-import NxWelcome from './nx-welcome';
+import {createInstance} from "@amplitude/analytics-browser";
+
+export const amp3 = createInstance();
+amp3.init('37c46696968a81dd4193b5c2e5b5ad9', undefined, { defaultTracking: { sessions: true, pageViews: true, formInteractions: true, fileDownloads: true }});
+
 
 export function App() {
   return (
     <div>
-      <NxWelcome title="remote-app2" />
+      <h1>Welcome to remote-app2!</h1>
+      <button onClick={() => amp3.track("Event sent from Remote2 app: btn", {
+        source: "remoteApp2",
+      })}>Send event from remote app 1)!</button>
+
     </div>
   );
 }
